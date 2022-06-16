@@ -23,6 +23,7 @@
                         <th scope="col">E-mail</th>
                         <th scope="col">Phone</th>
                         <th scope="col">Document</th>
+                        <th scope="col">Is Admin</th>
                         <th scope="col">Created at</th>
                     </tr>
                 </thead>
@@ -33,6 +34,7 @@
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->phone }}</td>
                         <td>{{ $user->document }}</td>
+                        <td>{{ $user->is_admin ? 'Yes' : 'No' }}</td>
                         <td>{{ $user->created_at->diffForHumans(now()) }}</td>
                     </tr>
                 </tbody>
