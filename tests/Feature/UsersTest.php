@@ -14,6 +14,28 @@ class UsersTest extends TestCase
     use RefreshDatabase, WithFaker;
 
     /**
+     * @dataProvider provideTestShouldRedirectToLoginWhenGuestAttempt
+     */
+    public function testShouldRedirectToLoginWhenGuestAttempt($response)
+    {
+        $response
+            ->assertStatus(302)
+            ->assertRedirect('/login');
+    }
+
+    public function provideTestShouldRedirectToLoginWhenGuestAttempt()
+    {
+        $this->refreshApplication();
+
+        return [
+            'whenIndexTry' => [$this->get('/users')],
+            'whenSeeTry' => [$this->get('/users/' . '1')],
+            'whenEditTry' => [$this->put('/users/' . '1')],
+            'whenDeleteTry' => [$this->delete('/users/' . '1')],
+        ];
+    }
+
+    /**
      * @dataProvider provideTestShouldReturnErrorToPostAttempt
      */
     public function testShouldReturnErrorToPostAttempt($response)
@@ -31,6 +53,7 @@ class UsersTest extends TestCase
         return [
             'whenAdministrator' => [$this->actingAs($this->user(true))->post('/users')],
             'whenNonAdministrator' => [$this->actingAs($this->user())->post('/users')],
+            'whenGuest' => [$this->post('/users')],
         ];
     }
 
@@ -204,7 +227,7 @@ class UsersTest extends TestCase
             ],
 
             'wrongIsAdmin' => [
-                ['is_admin' => Str::random(1)],
+                ['is_admin' => Str::random(10)],
                 ['is_admin' => [__('The is admin field must be true or false.')]],
             ],
         ];
