@@ -15,10 +15,11 @@ class UserUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['nullable', 'string', 'max:255'],
+            'name' => ['nullable', 'string', 'min:5', 'max:150'],
             'document' => ['nullable', 'string', new CpfCnpjRule(), 'unique:users,document,'.request()->query('user')],
-            'email' => ['nullable', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['nullable', 'string', 'email', 'min:5', 'max:255', 'unique:users'],
             'phone' => ['nullable', 'string', 'regex:/^\(?(?:[14689][1-9]|2[12478]|3[1234578]|5[1345]|7[134579])\)? ?(?:[2-8]|9[1-9])[0-9]{3}\-?[0-9]{4}$/'],
+            'is_admin' => ['nullable', 'boolean'],
         ];
     }
 }
