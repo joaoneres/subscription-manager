@@ -44,4 +44,13 @@ class UserFactory extends Factory
             ];
         });
     }
+
+    public function document(String $document)
+    {
+        return $this->state(function (array $attributes) use($document) {
+            return [
+                'document' => $document,
+            ];
+        });
+    }
 }
