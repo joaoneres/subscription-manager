@@ -27,15 +27,6 @@ class UserFactory extends Factory
         ];
     }
 
-    public function unverified()
-    {
-        return $this->state(function (array $attributes) {
-            return [
-                'email_verified_at' => null,
-            ];
-        });
-    }
-
     public function admin()
     {
         return $this->state(function (array $attributes) {
@@ -50,6 +41,15 @@ class UserFactory extends Factory
         return $this->state(function (array $attributes) use($document) {
             return [
                 'document' => $document,
+            ];
+        });
+    }
+
+    public function unverifiedEmail()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'email_verified_at' => null,
             ];
         });
     }
