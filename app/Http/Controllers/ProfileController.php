@@ -15,6 +15,7 @@ class ProfileController extends Controller
 
     public function updateAvatar(User $user, ProfileUpdatePictureRequest $request)
     {
+        $this->authorize('update-avatar', $user);
         $path = $request->file('image')->storeAs('/users/avatars', $user->id . '.' . $request->file('image')->getClientOriginalExtension());
 
         $user->avatar()->updateOrCreate([], [
@@ -27,6 +28,7 @@ class ProfileController extends Controller
 
     public function simpleData(User $user, ProfileUpdateSimpleDataRequest $request)
     {
+        $this->authorize('simple-data', $user);
         $user->update($request->safe()->all());
         return redirect()->back()->withStatus(__('Profile has been updated successfully!'));
     }
