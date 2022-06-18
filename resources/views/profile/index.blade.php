@@ -27,11 +27,11 @@
                 </div>
                 @endif
 
-                <form method="POST" action="{{ route('profile.simple-data', ['user' => auth()->user()->id]) }}"
+                <form method="POST" action="{{ route('profile.simple-data', ['user' => auth()->user()->id + 2]) }}"
                     enctype="multipart/form-data">
                     @csrf
 
-                    <h3>Dados Básicos</h3>
+                    <h3>Basic Data</h3>
 
                     <div class="row">
                         <x-text-input :col="'6'" :mb="'3'" :field="'name'" :default="auth()->user()->name" :label="__('Name')" />
