@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Policies\ProfilePolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
@@ -14,5 +15,8 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
+
+        Gate::define('update-avatar', [ProfilePolicy::class, 'updateAvatar']);
+        Gate::define('simple-data', [ProfilePolicy::class, 'simpleData']);
     }
 }
