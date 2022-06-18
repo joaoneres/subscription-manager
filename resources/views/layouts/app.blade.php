@@ -21,6 +21,15 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     @yield('customCss')
+
+    <style>
+        .navbar-nav .nav-link {
+            padding-top: 0;
+            padding-bottom: 0;
+            height: 50px;
+            line-height: 50px;
+        }
+    </style>
 </head>
 
 <body>
@@ -43,7 +52,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto d-flex align-bottom">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -71,17 +80,27 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('profile') }}">
+                                        {{ __('Profile') }}
+                                    </a>
+
+                                    <hr class="dropdown-divider">
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                        class="d-none">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
                                 </div>
                             </li>
+
+                            @if (auth()->user()->avatar)
+                                <img src="{{ auth()->user()->avatar->url() }}" alt="" width="48"
+                                    height="48" class="d-inline-block rounded-circle align-text-top">
+                            @endif
                         @endguest
                     </ul>
                 </div>
