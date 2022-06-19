@@ -7,6 +7,11 @@ use App\Models\User;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('password.confirm')->only('destroy');
+    }
+
     public function index()
     {
         $this->authorize('index', User::class);
