@@ -49,7 +49,7 @@ class VerificationController extends Controller
 
         return $request->wantsJson()
                     ? new JsonResponse([], 204)
-                    : redirect($this->redirectPath())->with('verified', true)->withStatus('E-mail verified successfully!');
+                    : redirect($this->redirectPath())->with('verified', true)->withStatus(__('E-mail verified successfully!'));
     }
 
     public function resend(Request $request)
@@ -64,6 +64,6 @@ class VerificationController extends Controller
 
         return $request->wantsJson()
                     ? new JsonResponse([], 202)
-                    : back()->with('resent', true)->withStatus('E-mail verification sent successfully!');
+                    : back()->with('resent', true)->withStatus(__('A fresh verification link has been sent to your e-mail address.'));
     }
 }
