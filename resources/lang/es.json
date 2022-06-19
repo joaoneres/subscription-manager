@@ -12,19 +12,32 @@
     "Home": "Comienzo",
     "Login": "Acceso",
     "Register": "Registro",
-    "Users": "Usuarios",
+    "User|Users": "Usuario|Usuarios",
     "Profile": "Perfil",
     "Logout": "Salir",
 
+    "See": "Ver",
+    "Edit": "Editar",
+    "Delete": "Eliminar",
     "Update": "Actualizar",
+    "Actions": "Acciones",
+    "Back": "Volver",
     "Select...": "Seleccionar...",
 
+    "Yes": "Sí",
+    "No": "No",
+
+    "ID": "ID",
     "Name": "Nombre",
     "E-mail": "Email",
     "CPF/CNPJ": "CPF/CNPJ",
     "Phone": "Teléfono",
+    "Is Admin": "Es Administrador",
+    "Created At": "Creado En",
 
     "Resend e-mail verification link": "Reenviar enlace de verificación de correo electrónico",
-    ":name has been updated successfully!": ":name ha sido actualizado con éxito!"
+    ":name has been updated successfully!": ":name ha sido actualizado con éxito!",
+    ":name has been deleted successfully!": ":name ha sido eliminado con éxito!",
+    "No items available": "No hay elementos disponibles"
 }
 

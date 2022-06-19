@@ -12,18 +12,31 @@
     "Home": "Home",
     "Login": "Login",
     "Register": "Register",
-    "Users": "Users",
+    "User|Users": "User|Users",
     "Profile": "Profile",
     "Logout": "Logout",
 
+    "See": "See",
+    "Edit": "Edit",
+    "Delete": "Delete",
     "Update": "Update",
+    "Actions": "Actions",
+    "Back": "Back",
     "Select...": "Select...",
 
+    "Yes": "Yes",
+    "No": "No",
+
+    "ID": "ID",
     "Name": "Name",
     "E-mail": "E-mail",
     "CPF/CNPJ": "CPF/CNPJ",
     "Phone": "Phone",
+    "Is Admin": "Is Admin",
+    "Created At": "Created At",
 
     "Resend e-mail verification link": "Resend e-mail verification link",
-    ":name has been updated successfully!": ":name has been updated successfully!"
+    ":name has been updated successfully!": ":name has been updated successfully!",
+    ":name has been deleted successfully!": ":name has been deleted successfully!",
+    "No items available": "No items to dispose"
 }
