@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Auth::routes(['verify' => true]);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('users', App\Http\Controllers\UserController::class)->except('store', 'create')->middleware(['auth', 'verified']);
+
+Route::middleware(['auth'])->prefix('profile')->group(function() {
+    Route::get('/', [App\Http\Controllers\ProfileController::class, 'profile'])->name('profile');
+    Route::post('{user}/avatar', [App\Http\Controllers\ProfileController::class, 'updateAvatar'])->name('profile.avatar');
+    Route::post('{user}/simple-data', [App\Http\Controllers\ProfileController::class, 'simpleData'])->name('profile.simple-data');
+});
+
+Route::middleware('auth')->prefix('settings')->group(function() {
+    Route::get('/', [App\Http\Controllers\SettingController::class, 'settings'])->name('settings');
+    Route::post('/locale', [App\Http\Controllers\SettingController::class, 'locale'])->name('settings.locale');
 });

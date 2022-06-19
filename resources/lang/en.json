@@ -1,0 +1,57 @@
+{
+    "Settings": "Settings",
+    "Avatar": "Avatar",
+    "Basic Data": "Basic Data",
+    "Verify your e-mail": "Verify your email",
+    "Dashboard": "Dashboard",
+
+    "Locale": "Locale",
+    "Spanish": "Spanish",
+    "English": "English",
+    "Portuguese": "Portuguese",
+
+    "Home": "Home",
+    "Login": "Login",
+    "Register": "Register",
+    "User|Users": "User|Users",
+    "Profile": "Profile",
+    "Logout": "Logout",
+
+    "See": "See",
+    "Edit": "Edit",
+    "Delete": "Delete",
+    "Update": "Update",
+    "Actions": "Actions",
+    "Back": "Back",
+    "Select...": "Select...",
+
+    "Yes": "Yes",
+    "No": "No",
+
+    "ID": "ID",
+    "Name": "Name",
+    "E-mail": "E-mail",
+    "CPF/CNPJ": "CPF/CNPJ",
+    "Phone": "Phone",
+    "Is Admin": "Is Admin",
+    "Created At": "Created At",
+    "Password": "Password",
+    "Confirm Password": "Confirm Password",
+    "Remember Me": "Remember Me",
+
+    "Reset Password": "Reset Password",
+    "Forgot Your Password?": "Forgot Your Password?",
+    "Send Password Reset Link": "Send Password Reset Link",
+    "Verify Your E-mail Address": "Verify Your E-mail Address",
+    "A fresh verification link has been sent to your e-mail address.": "A fresh verification link has been sent to your e-mail address.",
+    "Before proceeding, please check your email for a verification link.": "Before proceeding, please check your email for a verification link.",
+    "If you did not receive the email": "If you did not receive the email",
+    "click here to request another": "click here to request another",
+    "Resend e-mail verification link": "Resend e-mail verification link",
+    "Please confirm your password before continuing.": "Please confirm your password before continuing.",
+
+    ":name has been updated successfully!": ":name has been updated successfully!",
+    ":name has been deleted successfully!": ":name has been deleted successfully!",
+    "No items available": "No items to dispose",
+    "You are logged in!": "You are logged in!"
+}
