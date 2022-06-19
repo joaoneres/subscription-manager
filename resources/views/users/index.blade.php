@@ -10,24 +10,24 @@
 
 @section('content')
     <div class="container">
-        <h1>Users</h1>
+        <h1>{{ trans_choice(__('User|Users'), 2) }}</h1>
 
         <div class="table-responsive">
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">E-mail</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">Actions</th>
+                        <th scope="col">{{ __('ID') }}</th>
+                        <th scope="col">{{ __('Name') }}</th>
+                        <th scope="col">{{ __('E-mail') }}</th>
+                        <th scope="col">{{ __('Phone') }}</th>
+                        <th scope="col">{{ __('Actions') }}</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @if(count($users) == 0)
+                    @if(count($users) === 0)
                         <tr>
                             <td colspan="5">
-                                <span class="text-danger">Sem itens para dispor.</span>
+                                <span class="text-danger">{{ __('No items available') }}</span>
                             </td>
                         </tr>
                     @endif
@@ -43,10 +43,10 @@
                                     @csrf
                                     @method('DELETE')
 
-                                    <a href="{{ route('users.show', ['user' => $user->id]) }}" class="btn btn-primary">See</a>
-                                    <a href="{{ route('users.edit', ['user' => $user->id]) }}" class="btn btn-secondary">Edit</a>
+                                    <a href="{{ route('users.show', ['user' => $user->id]) }}" class="btn btn-primary">{{ __('See') }}</a>
+                                    <a href="{{ route('users.edit', ['user' => $user->id]) }}" class="btn btn-secondary">{{ __('Edit') }}</a>
 
-                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                    <button type="submit" class="btn btn-danger">{{ __('Delete') }}</button>
                                 </form>
                             </td>
                         </tr>
