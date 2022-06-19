@@ -1,0 +1,29 @@
+{
+    "Settings": "Settings",
+    "Avatar": "Avatar",
+    "Basic Data": "Basic Data",
+    "Verify your e-mail": "Verify your email",
+
+    "Locale": "Locale",
+    "Spanish": "Spanish",
+    "English": "English",
+    "Portuguese": "Portuguese",
+
+    "Home": "Home",
+    "Login": "Login",
+    "Register": "Register",
+    "Users": "Users",
+    "Profile": "Profile",
+    "Logout": "Logout",
+
+    "Update": "Update",
+    "Select...": "Select...",
+
+    "Name": "Name",
+    "E-mail": "E-mail",
+    "CPF/CNPJ": "CPF/CNPJ",
+    "Phone": "Phone",
+
+    "Resend e-mail verification link": "Resend e-mail verification link",
+    ":name has been updated successfully!": ":name has been updated successfully!"
+}

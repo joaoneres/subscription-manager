@@ -1,0 +1,30 @@
+{
+    "Settings": "Ajustes",
+    "Avatar": "Foto de Perfil",
+    "Basic Data": "Datos básicos",
+    "Verify your e-mail": "Consultar su correo electrónico",
+
+    "Locale": "Lugar",
+    "Spanish": "Español",
+    "English": "Inglés",
+    "Portuguese": "Portugués",
+
+    "Home": "Comienzo",
+    "Login": "Acceso",
+    "Register": "Registro",
+    "Users": "Usuarios",
+    "Profile": "Perfil",
+    "Logout": "Salir",
+
+    "Update": "Actualizar",
+    "Select...": "Seleccionar...",
+
+    "Name": "Nombre",
+    "E-mail": "Email",
+    "CPF/CNPJ": "CPF/CNPJ",
+    "Phone": "Teléfono",
+
+    "Resend e-mail verification link": "Reenviar enlace de verificación de correo electrónico",
+    ":name has been updated successfully!": ":name ha sido actualizado con éxito!"
+}
+
