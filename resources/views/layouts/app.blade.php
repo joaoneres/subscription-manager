@@ -84,6 +84,10 @@
                                         {{ __('Profile') }}
                                     </a>
 
+                                    <a class="dropdown-item" href="{{ route('settings') }}">
+                                        {{ __('Settings') }}
+                                    </a>
+
                                     <hr class="dropdown-divider">
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
