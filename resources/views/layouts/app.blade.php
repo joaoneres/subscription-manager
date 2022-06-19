@@ -69,7 +69,7 @@
                         @else
                             @if (Auth::user()->is_admin)
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('users.index') }}">{{ __('Users') }}</a>
+                                    <a class="nav-link" href="{{ route('users.index') }}">{{ trans_choice(__('User|Users'), 2) }}</a>
                                 </li>
                             @endif
 
