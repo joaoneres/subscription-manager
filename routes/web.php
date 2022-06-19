@@ -29,3 +29,8 @@ Route::middleware('auth')->prefix('profile')->group(function() {
     Route::post('{user}/avatar', [App\Http\Controllers\ProfileController::class, 'updateAvatar'])->name('profile.avatar');
     Route::post('{user}/simple-data', [App\Http\Controllers\ProfileController::class, 'simpleData'])->name('profile.simple-data');
 });
+
+Route::middleware('auth')->prefix('settings')->group(function() {
+    Route::get('/', [App\Http\Controllers\SettingController::class, 'settings'])->name('settings');
+    Route::post('/locale', [App\Http\Controllers\SettingController::class, 'locale'])->name('settings.locale');
+});
