@@ -8,27 +8,17 @@
                 <div class="card-header">{{ __('Confirm Password') }}</div>
 
                 <div class="card-body">
-                    {{ __('Please confirm your password before continuing.') }}
+                    <p>
+                        {{ __('Please confirm your password before continuing.') }}
+                    </p>
 
                     <form method="POST" action="{{ route('password.confirm') }}">
                         @csrf
 
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                        <x-password-input :col="'12'" :mb="'3'" :field="'password'" :label="__('Password')" />
 
                         <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
+                            <div class="col-md-12">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Confirm Password') }}
                                 </button>
