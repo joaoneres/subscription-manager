@@ -6,19 +6,21 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Lang;
 
 class UserResetPasswordNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
-    public $token;
+    public $token, $locale;
     public static $createUrlCallback;
     public static $toMailCallback;
 
-    public function __construct($token)
+    public function __construct($token, $locale)
     {
         $this->token = $token;
+        $this->locale = $locale;
     }
 
     public function via($notifiable)
@@ -54,6 +56,7 @@ class UserResetPasswordNotification extends Notification implements ShouldQueue
         return url(route('password.reset', [
             'token' => $this->token,
             'email' => $notifiable->getEmailForPasswordReset(),
+            'locale' => $this->locale,
         ], false));
     }
 
