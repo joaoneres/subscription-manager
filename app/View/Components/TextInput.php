@@ -8,7 +8,7 @@ class TextInput extends Component
 {
     public $col, $field, $label, $default, $mb, $readonly;
 
-    public function __construct($mb = 0, $col, $field, $default = null, $label, $readonly = false)
+    public function __construct($mb = '0', $col, $field, $default = null, $label, $readonly = false)
     {
         $this->mb = $mb;
         $this->col = $col;
