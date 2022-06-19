@@ -27,7 +27,7 @@
                 </div>
                 @endif
 
-                <form method="POST" action="{{ route('profile.simple-data', ['user' => auth()->user()->id + 2]) }}"
+                <form method="POST" action="{{ route('profile.simple-data', ['user' => auth()->user()->id]) }}"
                     enctype="multipart/form-data">
                     @csrf
 
