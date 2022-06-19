@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class TextInput extends Component
+class EmailInput extends Component
 {
     public $col, $field, $label, $default, $mb, $readonly;
 
@@ -20,6 +20,6 @@ class TextInput extends Component
 
     public function render()
     {
-        return view('components.text-input');
+        return view('components.email-input');
     }
 }

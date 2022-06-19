@@ -7,6 +7,11 @@ use App\Models\User;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('password.confirm')->only('destroy');
+    }
+
     public function index()
     {
         $this->authorize('index', User::class);
@@ -30,13 +35,13 @@ class UserController extends Controller
     {
         $this->authorize('update', User::class);
         $user->update($request->safe()->all());
-        return redirect()->route('users.index')->withStatus($user->name.' was updated successfully!');
+        return redirect()->route('users.index')->withStatus(__(':name has been updated successfully!', ['name' => $user->name]));
     }
 
     public function destroy(User $user)
     {
         $this->authorize('destroy', User::class);
         $user->delete();
-        return redirect()->route('users.index')->withStatus($user->name.' was deleted successfully!');
+        return redirect()->route('users.index')->withStatus(__(':name has been deleted successfully!', ['name' => $user->name]));
     }
 }

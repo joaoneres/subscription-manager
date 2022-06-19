@@ -23,13 +23,13 @@ class ProfileController extends Controller
             'disk' => env('FILESYSTEM_DRIVER'),
         ]);
 
-        return redirect()->back()->withStatus(__('Avatar was successfully updated!'));
+        return redirect()->back()->withStatus(__(':name has been updated successfully!', ['name' => __('Avatar')]));
     }
 
     public function simpleData(User $user, ProfileUpdateSimpleDataRequest $request)
     {
         $this->authorize('simple-data', $user);
         $user->update($request->safe()->all());
-        return redirect()->back()->withStatus(__('Profile has been updated successfully!'));
+        return redirect()->back()->withStatus(__(':name has been updated successfully!', ['name' => __('Profile')]));
     }
 }

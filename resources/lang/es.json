@@ -1,0 +1,58 @@
+{
+    "Settings": "Ajustes",
+    "Avatar": "Foto de Perfil",
+    "Basic Data": "Datos básicos",
+    "Verify your e-mail": "Consultar su correo electrónico",
+    "Dashboard": "Inicio",
+
+    "Locale": "Lugar",
+    "Spanish": "Español",
+    "English": "Inglés",
+    "Portuguese": "Portugués",
+
+    "Home": "Comienzo",
+    "Login": "Acceso",
+    "Register": "Registro",
+    "User|Users": "Usuario|Usuarios",
+    "Profile": "Perfil",
+    "Logout": "Salir",
+
+    "See": "Ver",
+    "Edit": "Editar",
+    "Delete": "Eliminar",
+    "Update": "Actualizar",
+    "Actions": "Acciones",
+    "Back": "Volver",
+    "Select...": "Seleccionar...",
+
+    "Yes": "Sí",
+    "No": "No",
+
+    "ID": "ID",
+    "Name": "Nombre",
+    "E-mail": "Email",
+    "CPF/CNPJ": "CPF/CNPJ",
+    "Phone": "Teléfono",
+    "Is Admin": "Es Administrador",
+    "Created At": "Creado En",
+    "Password": "Contraseña",
+    "Confirm Password": "Confirmar contraseña",
+    "Remember Me": "Recuérdame",
+
+    "Reset Password": "Restablecer su contraseña",
+    "Forgot Your Password?": "¿Olvidaste tu contraseña?",
+    "Send Password Reset Link": "Enviar Enlace de Restablecimiento de Contraseña",
+    "Verify Your E-mail Address": "Verifique Su Dirección de Correo Electrónico",
+    "A fresh verification link has been sent to your e-mail address.": "Se ha enviado un nuevo enlace de verificación a su dirección de correo electrónico.",
+    "Before proceeding, please check your email for a verification link.": "Antes de continuar, verifique su correo electrónico para obtener el enlace de verificación.",
+    "If you did not receive the email": "Si no recibiste el correo electrónico",
+    "click here to request another": "haga clic aquí para solicitar otro",
+    "Resend e-mail verification link": "Reenviar enlace de verificación de correo electrónico",
+    "Please confirm your password before continuing.": "Por favor, confirme su contraseña antes de continuar.",
+
+    ":name has been updated successfully!": ":name ha sido actualizado con éxito!",
+    ":name has been deleted successfully!": ":name ha sido eliminado con éxito!",
+    "No items available": "No hay elementos disponibles",
+    "You are logged in!": "Estás conectado!"
+}
+

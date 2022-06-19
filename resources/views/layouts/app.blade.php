@@ -69,7 +69,7 @@
                         @else
                             @if (Auth::user()->is_admin)
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('users.index') }}">{{ __('Users') }}</a>
+                                    <a class="nav-link" href="{{ route('users.index') }}">{{ trans_choice(__('User|Users'), 2) }}</a>
                                 </li>
                             @endif
 
@@ -82,6 +82,10 @@
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('profile') }}">
                                         {{ __('Profile') }}
+                                    </a>
+
+                                    <a class="dropdown-item" href="{{ route('settings') }}">
+                                        {{ __('Settings') }}
                                     </a>
 
                                     <hr class="dropdown-divider">
