@@ -3,6 +3,7 @@
     "Avatar": "Foto de Perfil",
     "Basic Data": "Dados Básicos",
     "Verify your e-mail": "Verifique seu e-mail",
+    "Dashboard": "Início",
 
     "Locale": "Localização",
     "Spanish": "Espanhol",
@@ -47,7 +48,10 @@
     "If you did not receive the email": "Se você não recebeu o e-mail",
     "click here to request another": "clique aqui para solicitar outro",
     "Resend e-mail verification link": "Reenviar link de verificação de e-mail",
+    "Please confirm your password before continuing.": "Por favor, confirme sua senha antes de continuar.",
+
     ":name has been updated successfully!": ":name foi atualizado com sucesso!",
     ":name has been deleted successfully!": ":name foi deletado com sucesso!",
-    "No items available": "Nenhum item disponível"
+    "No items available": "Nenhum item disponível",
+    "You are logged in!": "Você entrou no sistema!"
 }

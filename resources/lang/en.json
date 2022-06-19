@@ -3,6 +3,7 @@
     "Avatar": "Avatar",
     "Basic Data": "Basic Data",
     "Verify your e-mail": "Verify your email",
+    "Dashboard": "Dashboard",
 
     "Locale": "Locale",
     "Spanish": "Spanish",
@@ -47,7 +48,10 @@
     "If you did not receive the email": "If you did not receive the email",
     "click here to request another": "click here to request another",
     "Resend e-mail verification link": "Resend e-mail verification link",
+    "Please confirm your password before continuing.": "Please confirm your password before continuing.",
+
     ":name has been updated successfully!": ":name has been updated successfully!",
     ":name has been deleted successfully!": ":name has been deleted successfully!",
-    "No items available": "No items to dispose"
+    "No items available": "No items to dispose",
+    "You are logged in!": "You are logged in!"
 }
