@@ -60,12 +60,9 @@ class UsersTest extends TestCase
     /**
      * @dataProvider provideTestShouldBeUnauthorizedWhenUserIsntAdministratorCases
      */
-    public function testShouldBeUnauthorizedWhenUserIsntAdministrator($response)
+    public function testShouldBeUnauthorizedWhenUserIsntAdministrator($response, $status)
     {
-        $response
-            ->assertStatus(403)
-            ->assertSeeText('403')
-            ->assertSeeText(__('This action is unauthorized'));
+        $response->assertStatus($status);
     }
 
     public function provideTestShouldBeUnauthorizedWhenUserIsntAdministratorCases()
@@ -74,10 +71,10 @@ class UsersTest extends TestCase
         $user = $this->user();
 
         return [
-            'unableToGetUsers' => [$this->actingAs($user)->get('/users')],
-            'unableToSeeUsers' => [$this->actingAs($user)->get('/users/' . $user->id)],
-            'unableToPutUsers' => [$this->actingAs($user)->put('/users/' . $user->id)],
-            'unableToDeleteUsers' => [$this->actingAs($user)->delete('/users/' . $user->id)],
+            'unableToGetUsers' => [$this->actingAs($user)->get('/users'), 403],
+            'unableToSeeUsers' => [$this->actingAs($user)->get('/users/' . $user->id), 403],
+            'unableToPutUsers' => [$this->actingAs($user)->put('/users/' . $user->id), 403],
+            'unableToDeleteUsers' => [$this->actingAs($user)->delete('/users/' . $user->id), 302],
         ];
     }
 
@@ -113,9 +110,9 @@ class UsersTest extends TestCase
             ->assertSeeText(__('ID'))
             ->assertSeeText(__('Name'))
             ->assertSeeText(__('Phone'))
-            ->assertSeeText(__('Document'))
+            ->assertSeeText(__('CPF/CNPJ'))
             ->assertSeeText(__('Is Admin'))
-            ->assertSeeText(__('Created at'))
+            ->assertSeeText(__('Created At'))
             ->assertSeeText($user->name)
             ->assertSeeText($user->email)
             ->assertSeeText($user->phone)
@@ -137,19 +134,16 @@ class UsersTest extends TestCase
 
         $response
             ->assertStatus(302)
-            ->assertSessionHas('status', __($name . ' was updated successfully!'));
+            ->assertSessionHas('status', __(':name has been updated successfully!', ['name' => $name]));
     }
 
     public function testShouldDeleteUser()
     {
         $user = $this->user(true);
         $created_user = $this->user();
-
         $response = $this->actingAs($user)->delete('/users/' . $created_user->id);
-
-        $response
-            ->assertStatus(302)
-            ->assertSessionHas('status', __($created_user->name . ' was deleted successfully!'));
+        $response->assertStatus(302)->assertRedirect(route('password.confirm'));
+        $this->followRedirects($response)->assertSeeText(__('Confirm Password'));
     }
 
     /**
@@ -194,10 +188,6 @@ class UsersTest extends TestCase
             'wrongDocumentAsANumber' => [
                 ['document' => 10347378056],
                 ['document' => [__('The document must be a string.')]],
-            ],
-            'wrongDocumentNotUnique' => [
-                ['document' => '30565169009'],
-                ['document' => [__('The document has already been taken.')]],
             ],
 
             'wrongEmail' => [

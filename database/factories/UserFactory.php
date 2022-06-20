@@ -22,6 +22,7 @@ class UserFactory extends Factory
             'phone_verified_at' => now(),
             'document' => $this->faker->regexify('[0-9]{11}'),
             'is_admin' => false,
+            'locale' => 'en',
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'remember_token' => Str::random(10),
         ];
