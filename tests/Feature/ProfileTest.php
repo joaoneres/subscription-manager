@@ -93,7 +93,7 @@ class ProfileTest extends TestCase
 
         $response
             ->assertStatus(302)
-            ->assertSessionHas('status', __('Avatar was successfully updated!'));
+            ->assertSessionHas('status', __(':name has been updated successfully!', ['name' => 'Avatar']));
     }
 
      /**
