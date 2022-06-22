@@ -15,7 +15,7 @@
                     <form method="POST" action="{{ route('password.confirm') }}">
                         @csrf
 
-                        <x-password-input :col="'12'" :mb="'3'" :field="'password'" :label="__('Password')" />
+                        <x-input :col="'12'" :mb="'3'" :field="'password'" :label="__('Password')" :type="'password'" />
 
                         <div class="row mb-0">
                             <div class="col-md-12">
