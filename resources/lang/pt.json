@@ -14,12 +14,21 @@
     "Login": "Entrar",
     "Register": "Registro",
     "User|Users": "Usuário|Usuários",
+    "Product|Products": "Produto|Produtos",
     "Profile": "Perfil",
     "Logout": "Sair",
+
+    "$": "R$",
 
     "Yes": "Sim",
     "No": "Não",
 
+    "Daily": "Diário",
+    "Weekly": "Semanal",
+    "Monthly": "Mensal",
+    "Yearly": "Anual",
+
+    "Create": "Adicionar",
     "See": "Ver",
     "Edit": "Editar",
     "Delete": "Deletar",
@@ -27,8 +36,7 @@
     "Actions": "Ações",
     "Back": "Voltar",
     "Select...": "Selecionar...",
-    "Is Admin": "É Administrador",
-    "Created At": "Criado Em",
+    "Subscribe": "Suscribir",
 
     "ID": "ID",
     "Name": "Nome",
@@ -38,6 +46,13 @@
     "Password": "Senha",
     "Confirm Password": "Confirme a Senha",
     "Remember Me": "Lembre-me",
+    "Description": "Descrição",
+    "Is Admin": "É Administrador",
+    "Created At": "Criado Em",
+    "Price": "Preço",
+    "Cover": "Imagem",
+    "Period": "Período",
+    "Recurrent": "Recorrente",
 
     "Reset Password": "Redefina Sua Senha",
     "Forgot Your Password?": "Esqueceu Sua Senha?",
@@ -52,6 +67,10 @@
 
     ":name has been updated successfully!": ":name foi atualizado com sucesso!",
     ":name has been deleted successfully!": ":name foi deletado com sucesso!",
+    ":name has been created successfully!": ":name foi criado com sucesso!",
+
     "No items available": "Nenhum item disponível",
-    "You are logged in!": "Você entrou no sistema!"
+    "You are logged in!": "Você entrou no sistema!",
+    "No Recurrent": "Não recorrente",
+    "Valid For A :time Period": "Válido Por Um Período :time"
 }

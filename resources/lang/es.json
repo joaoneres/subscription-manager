@@ -14,9 +14,13 @@
     "Login": "Acceso",
     "Register": "Registro",
     "User|Users": "Usuario|Usuarios",
+    "Product|Products": "Producto|Productos",
     "Profile": "Perfil",
     "Logout": "Salir",
 
+    "$": "$",
+
+    "Create": "Crear",
     "See": "Ver",
     "Edit": "Editar",
     "Delete": "Eliminar",
@@ -24,9 +28,15 @@
     "Actions": "Acciones",
     "Back": "Volver",
     "Select...": "Seleccionar...",
+    "Subscribe": "Suscribir",
 
     "Yes": "Sí",
     "No": "No",
+
+    "Daily": "Diario",
+    "Weekly": "Semanal",
+    "Monthly": "Mensual",
+    "Yearly": "Anual",
 
     "ID": "ID",
     "Name": "Nombre",
@@ -38,6 +48,11 @@
     "Password": "Contraseña",
     "Confirm Password": "Confirmar contraseña",
     "Remember Me": "Recuérdame",
+    "Description": "Descripción",
+    "Price": "Precio",
+    "Cover": "Imagen",
+    "Period": "Período",
+    "Recurrent": "Recurrente",
 
     "Reset Password": "Restablecer su contraseña",
     "Forgot Your Password?": "¿Olvidaste tu contraseña?",
@@ -52,7 +67,11 @@
 
     ":name has been updated successfully!": ":name ha sido actualizado con éxito!",
     ":name has been deleted successfully!": ":name ha sido eliminado con éxito!",
+    ":name has been created successfully!": ":name ha sido creado con exito!!",
+
     "No items available": "No hay elementos disponibles",
-    "You are logged in!": "Estás conectado!"
+    "You are logged in!": "Estás conectado!",
+    "No Recurrent": "No recurrente",
+    "Valid For A :time Period": "Válido Por Un Período :time"
 }
 

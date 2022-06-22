@@ -14,9 +14,13 @@
     "Login": "Login",
     "Register": "Register",
     "User|Users": "User|Users",
+    "Product|Products": "Product|Products",
     "Profile": "Profile",
     "Logout": "Logout",
 
+    "$": "$",
+
+    "Create": "Create",
     "See": "See",
     "Edit": "Edit",
     "Delete": "Delete",
@@ -24,9 +28,15 @@
     "Actions": "Actions",
     "Back": "Back",
     "Select...": "Select...",
+    "Subscribe": "Subscribe",
 
     "Yes": "Yes",
     "No": "No",
+
+    "Daily": "Daily",
+    "Weekly": "Weekly",
+    "Monthly": "Monthly",
+    "Yearly": "Yearly",
 
     "ID": "ID",
     "Name": "Name",
@@ -38,6 +48,11 @@
     "Password": "Password",
     "Confirm Password": "Confirm Password",
     "Remember Me": "Remember Me",
+    "Description": "Description",
+    "Price": "Price",
+    "Cover": "Cover",
+    "Period": "Period",
+    "Recurrent": "Recurrent",
 
     "Reset Password": "Reset Password",
     "Forgot Your Password?": "Forgot Your Password?",
@@ -52,6 +67,10 @@
 
     ":name has been updated successfully!": ":name has been updated successfully!",
     ":name has been deleted successfully!": ":name has been deleted successfully!",
+    ":name has been created successfully!": ":name has been created successfully!",
+
     "No items available": "No items to dispose",
-    "You are logged in!": "You are logged in!"
+    "You are logged in!": "You are logged in!",
+    "No Recurrent": "No Recurrent",
+    "Valid For A :time Period": "Valid For A :time Period"
 }
