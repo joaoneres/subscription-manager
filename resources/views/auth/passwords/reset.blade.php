@@ -14,9 +14,9 @@
                         <input type="hidden" name="token" value="{{ $token }}">
 
                         <div class="row mb-3">
-                            <x-email-input :col="'4'" :mb="'3'" :field="'email'" :default="$email ?? old('email')" :label="__('E-mail')" />
-                            <x-password-input :col="'4'" :mb="'3'" :field="'password'" :label="__('Password')" />
-                            <x-password-input :col="'4'" :field="'password_confirmation'" :label="__('Confirm Password')" />
+                            <x-input :col="'4'" :mb="'3'" :field="'email'" :default="$email ?? old('email')" :label="__('E-mail')" :type="'email'"/>
+                            <x-input :col="'4'" :mb="'3'" :field="'password'" :label="__('Password')" :type="'password'"/>
+                            <x-input :col="'4'" :field="'password_confirmation'" :label="__('Confirm Password')" :type="'password'"/>
                         </div>
 
                         <div class="row mb-0">

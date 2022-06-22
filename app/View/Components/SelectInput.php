@@ -8,7 +8,7 @@ class SelectInput extends Component
 {
     public $col, $options, $selected, $field, $label, $mb, $required, $disabled;
 
-    public function __construct($options, $field, $col, $label = null, $mb = '0', $selected = null, $required = false, $disabled = false)
+    public function __construct($options, $field, $col, $label = null, $mb = '0', $selected = null, $required = true, $disabled = false)
     {
         $this->options = $options;
         $this->selected = $selected;

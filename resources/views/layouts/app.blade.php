@@ -30,6 +30,8 @@
             line-height: 50px;
         }
     </style>
+
+    @yield('additionalScripts')
 </head>
 
 <body>
@@ -67,6 +69,10 @@
                                 </li>
                             @endif
                         @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('products.index') }}">{{ trans_choice(__('Product|Products'), 2) }}</a>
+                            </li>
+
                             @if (Auth::user()->is_admin)
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('users.index') }}">{{ trans_choice(__('User|Users'), 2) }}</a>

@@ -34,10 +34,10 @@
                     <h3>{{ __('Basic Data') }}</h3>
 
                     <div class="row">
-                        <x-text-input :col="'6'" :mb="'3'" :field="'name'" :default="auth()->user()->name" :label="__('Name')" />
-                        <x-text-input :col="'6'" :mb="'3'" :field="'email'" :default="auth()->user()->email" :label="__('E-mail')" :readonly="true" />
-                        <x-text-input :col="'6'" :mb="'3'" :field="'document'" :default="auth()->user()->document" :label="__('CPF/CNPJ')" />
-                        <x-text-input :col="'6'" :mb="'3'" :field="'phone'" :default="auth()->user()->phone" :label="__('Phone')" />
+                        <x-input :col="'6'" :mb="'3'" :field="'name'" :default="auth()->user()->name" :label="__('Name')" />
+                        <x-input :col="'6'" :mb="'3'" :field="'email'" :default="auth()->user()->email" :label="__('E-mail')" :readonly="true" />
+                        <x-input :col="'6'" :mb="'3'" :field="'document'" :default="auth()->user()->document" :label="__('CPF/CNPJ')" />
+                        <x-input :col="'6'" :mb="'3'" :field="'phone'" :default="auth()->user()->phone" :label="__('Phone')" />
                     </div>
 
                     <button type="submit" class="btn btn-primary mb-3">{{ __('Update') }}</button>
