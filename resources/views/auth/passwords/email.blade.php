@@ -12,7 +12,7 @@
                         @csrf
 
                         <div class="row mb-3">
-                            <x-email-input :col="'12'" :field="'email'" :label="__('E-mail')" />
+                            <x-input :col="'12'" :field="'email'" :label="__('E-mail')" :type="'email'" />
                         </div>
 
                         <div class="row mb-0">
