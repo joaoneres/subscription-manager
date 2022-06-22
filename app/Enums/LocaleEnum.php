@@ -20,9 +20,9 @@ class LocaleEnum
     public static function toSelectInput()
     {
         return [
-            'es' => __('Spanish'),
-            'en' => __('English'),
-            'pt' => __('Portuguese'),
+            self::SPANISH => __('Spanish'),
+            self::ENGLISH => __('English'),
+            self::PORTUGUESE => __('Portuguese'),
         ];
     }
 }
